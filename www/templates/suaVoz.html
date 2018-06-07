@@ -1,0 +1,51 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('menu')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">SUA VOZ</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('demanda')">
+        <i class="icon ion-plus"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="true">
+    <div class="div-titulo-historico-demandas">
+      Histórico de demandas
+    </div>
+    <div></div>
+    <div ng-repeat="(index, demanda) in demandas"
+         style="background: rgba(255,255,255,1);
+                padding: 4px;
+                border-radius: 6px;
+                margin-top: {{(index==0)? 0 : 10;}}px;
+                margin-bottom: {{(index+1==demandas.length) ? 12 : 0;}}px">
+
+      <p class="p-deu-certo" style="font-size: 15px; font-weight: 700; margin-top: 5px; text-align:center;">
+        <span>Solicitação #{{pad(demanda.id)}}</span>
+      </p>
+      <img style="width: 100%;"
+           title=""
+           src="{{demanda.imagem}}"
+           alt="" />
+      <p class="p-deu-certo" style="font-size: 15px; font-weight: 700; margin-top: 5px; text-align:center;">
+        <span ng-bind="demanda.endereco"></span>
+        <span>,</span>
+        <span ng-bind="demanda.numero"></span>
+        <span>-</span>
+        <span ng-bind="demanda.bairro"></span>
+      </p>
+
+      <p class="p-deu-certo" style="font-size: 15px; font-weight: 700; margin-top: 5px; text-align:center;" ng-show="demanda.descricao_sua_voz.length > 0">
+        {{demanda.descricao_sua_voz}}
+      </p>
+
+      <p class="p-deu-certo" style="font-size: 15px; font-weight: 700; margin-top: 5px; text-align:center;" ng-show="demanda.descricao_sua_voz.length <= 0 || demanda.descricao_sua_voz == null">
+        Olá {{demanda.nome}}, recebemos sua demanda e já estamos direcionando para a secretaria correspondente.
+      </p>
+    </div>
+  </ion-content>
+</ion-view>

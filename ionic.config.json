@@ -1,0 +1,11 @@
+{
+  "name": "Conecta CB",
+  "app_id": "8d31c49a",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ],
+  "integrations": {
+    "cordova": {}
+  }
+}

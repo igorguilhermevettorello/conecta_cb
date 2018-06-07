@@ -1,0 +1,89 @@
+<ion-view id="page-menu" onload="paint()">
+  <ion-content padding="true" scroll="false">
+
+    <ion-drawer-vertical-wrapper direction="down" state="closed">
+      <ion-drawer-vertical-content>
+        <ion-list can-swipe="true">
+          <ion-item class="item-titulo-menu"
+                    style="text-align: center; padding: 0px;">
+            <img src="img/icones-menu/titulo-menu-new.png"
+                 style="height: 110px; padding-top: 20px; padding-bottom: 20px; margin-bottom: -5px;"/>
+          </ion-item>
+        </ion-list>
+
+        <ion-list can-swipe="true" class="list-sub-menu">
+          <ion-item style="height: 56px;" ng-click="goTo('menu')">Início</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('ajuda')">Ajuda</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('avaliacao')">Avaliar</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('sobre')">Sobre</ion-item>
+        </ion-list>
+      </ion-drawer-vertical-content>
+
+      <ion-drawer-vertical-handle ng-click="toggleDrawer()">
+        <i class="icon ion-navicon icon-navi-menu"></i>
+      </ion-drawer-vertical-handle>
+    </ion-drawer-vertical-wrapper>
+
+    <div id="video-campo-bom">
+      <video autoplay loop>
+        <source src="video/video.mp4" type="video/mp4"></source>
+      </video>
+    </div>
+
+    <div class="row" style="height: 100%;">
+      <div class="col div-principal-menu" style="height: 100%; z-index: 2; display: table-cell; vertical-align: middle; line-height: normal;">
+        <table class="tbl-icones">
+          <tr>
+            <td colspan="2" style="text-align: center; padding-bottom: 10px;">
+              <img src="img/conecta.png"
+                   style="width: {{itens.logo.width}}px; height: {{itens.logo.height}}px;"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/icones-menu/noticia.png"
+                   style="width: {{itens.icones.width}}px; height: {{itens.icones.height}}px;"
+                   ng-click="goTo('noticias')"/>
+            </td>
+            <td>
+              <img src="img/icones-menu/sua_voz.png"
+                   style="width: {{itens.icones.width}}px; height: {{itens.icones.height}}px;"
+                   ng-click="goTo('sua_voz')"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/icones-menu/deu_certo.png"
+                   style="width: {{itens.icones.width}}px; height: {{itens.icones.height}}px;"
+                   ng-click="goTo('deu_certo')"/>
+            </td>
+            <td>
+              <img src="img/icones-menu/empregos.png"
+                   style="width: {{itens.icones.width}}px; height: {{itens.icones.height}}px;"
+                   ng-click="goTo('empregos')"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="img/icones-menu/prefeitura.png"
+                   style="width: {{itens.icones.width}}px; height: {{itens.icones.height}}px;"
+                   ng-click="goTo('prefeitura')"/>
+            </td>
+            <td>
+              <img src="img/icones-menu/cidade.png"
+                   style="width: {{itens.icones.width}}px; height: {{itens.icones.height}}px;"
+                   ng-click="goTo('cidade')"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="padding-top: 20px;">
+              <img src="img/campo_bom_logo_2017.png"
+                   style="width: {{itens.uptec.width}}px; height: {{itens.uptec.height}}px;"
+                   ng-click="goTo('site')"/>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

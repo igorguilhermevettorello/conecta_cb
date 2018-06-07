@@ -1,0 +1,27 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('menu')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">CIDADE</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb-hidden" disabled>
+        <i class="icon ion-plus" style="color: transparent;"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="false">
+    <img src="img/cidade.png" style="width: 100%;"/>
+    <ion-list can-swipe="true" class="list-menu-cidade">
+      <ion-item style="height: 56px;" ng-click="goTo('historia')">História da Cidade</ion-item>
+      <ion-item style="height: 56px;" ng-click="goTo('simbolos')">Símbolos Municipais</ion-item>
+      <ion-item style="height: 56px;" ng-click="goTo('numeros_importantes')">Dados Gerais</ion-item>
+      <ion-item style="height: 56px;" ng-click="goTo('downloads')">Downloads</ion-item>
+      <ion-item style="height: 56px;" ng-click="goTo('cinema')">Cinema</ion-item>
+      <ion-item style="height: 56px;" ng-click="goTo('podas')">Podas</ion-item>
+      <ion-item style="height: 56px;" ng-click="goTo('telefones_uteis')">Telefones Úteis</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

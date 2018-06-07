@@ -1,0 +1,111 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('menu')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">EMPREGOS</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb-hidden" disabled>
+        <i class="icon ion-plus" style="color: transparent;"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="true">
+    <!--
+    <div class="div-get-localização">
+      <p>
+        <span ng-click="goTo('cadastrar')">
+          Cadastrar Vaga
+        </span>
+      </p>
+    </div>
+    -->
+
+    <div class="div-sine">
+      <p>Vagas de emprego disponíveis no Sine.</p>
+      <p><strong>Endereço:</strong> Avenida dos Estados, nº 900</p>
+      <p><strong>Horário:</strong> 8h às 11h - 12h às 15h</p>
+      <p><strong>Telefone:</strong> (51) 3597-1750</p>
+      <p><strong>E-mail:</strong> campobom@fgtas.rs.gov.br</p>
+    </div>
+
+    <hr />
+
+    <div style="height: 10px;"></div>
+
+    <div class="div-app-pmcb-vagas"
+         style="padding: 15px 17px 7px 17px;
+                margin-top: {{(index==0)? 0 : 10;}}px;
+                margin-bottom: {{(index+1==vagas.length) ? 10 : 0;}}px"
+         ng-repeat="(index, vaga) in vagas">
+      <!--
+      <p ng-show="vaga.nome_empresa" style="margin:0px;"><span>Empresa</span></p>
+      <p ng-show="vaga.nome_empresa" style="margin: 0 0 15px; font-weight: bold; font-size:16px;"><span ng-bind="vaga.nome_empresa"></span></p>
+
+      <p ng-show="vaga.cargo_oferecido" style="margin:0px"><span>Cargo</span></p>
+      <p ng-show="vaga.cargo_oferecido" style="margin: 0 0 15px; font-weight: bold; font-size:16px;"><span ng-bind="vaga.cargo_oferecido"></span></p>
+
+      <p ng-show="vaga.descricao_cargo" style="margin:0px"><span>Descrição</span></p>
+      <p ng-show="vaga.descricao_cargo" style="margin: 0 0 15px; font-weight: bold; font-size:16px;"><span ng-bind="vaga.descricao_cargo"></span></p>
+
+      <p ng-show="vaga.telefone" style="margin:0px"><span>Telefone</span></p>
+      <p ng-show="vaga.telefone" style="margin: 0 0 15px; font-weight: bold;">
+        <a ng-href="tel: {{vaga.fone}}">
+          <span ng-bind="vaga.telefone"></span>
+        </a>
+      </p>
+
+      <p ng-show="vaga.email" style="margin:0px"><span>Email</span></p>
+      <p ng-show="vaga.email" style="margin: 0 0 15px; font-weight: bold; font-size:16px;" ng-click="copy(vaga.email)">
+        <span ng-bind="vaga.email"></span>
+      </p>
+
+      <p ng-show="vaga.site" style="margin:0px"><span>Site</span></p>
+      <p ng-show="vaga.site" style="margin: 0 0 15px; font-weight: bold; font-size:16px;" ng-click="redirect(vaga.site)">
+        <span ng-bind="vaga.site"></span>
+      </p>
+      -->
+      <p ng-show="vaga.vaga" style="margin:0px;">
+        <span class="titulo-vaga-emprego">Vaga</span>
+      </p>
+      <p ng-show="vaga.vaga" style="margin: 0 0 15px; 
+                                            font-weight: bold; 
+                                            font-size:16px;">
+        <span ng-bind="vaga.vaga"></span>
+      </p>
+
+      <p ng-show="vaga.numero" style="margin:0px;">
+        <span class="titulo-vaga-emprego">Número de Vagas</span>
+      </p>
+      <p ng-show="vaga.numero" style="margin: 0 0 15px; 
+                                            font-weight: bold; 
+                                            font-size:16px;">
+        <span ng-bind="vaga.numero"></span>
+      </p>
+      <p ng-show="vaga.descricao_cargo" style="margin:0px">
+        <span class="titulo-vaga-emprego">Descrição</span>
+      </p>
+      <p ng-show="vaga.descricao_cargo" style="margin: 0 0 11px; 
+                                               font-weight: bold; 
+                                               font-size:16px;">
+        <span ng-bind="vaga.descricao_cargo"></span>
+      </p>
+    </div>
+
+    <div class="div-app-pmcb-vagas"
+         style="padding: 15px 17px 7px 17px;
+                margin-top: {{(index==0)? 0 : 10;}}px;"
+         ng-show="vagas.length == 0">
+      <p style="margin: 0 0 6px; 
+                font-weight: bold; 
+                font-size:16px;
+                text-align: center;">
+        <span>Não há vagas cadastradas.</span>
+      </p>
+    </div>
+
+    <p id="p1" style="display:none;"></p>
+  </ion-content>
+</ion-view>

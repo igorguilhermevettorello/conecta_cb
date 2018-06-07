@@ -1,0 +1,169 @@
+<ion-view id="page-ajuda">
+  <ion-content class="page-ajuda" scroll="false">
+    <ion-drawer-vertical-wrapper direction="down" state="closed">
+      <ion-drawer-vertical-content>
+        <ion-list can-swipe="true">
+          <ion-item class="item-titulo-menu"
+                    style="text-align: center; padding: 0px;">
+            <img src="img/icones-menu/titulo-menu-new.png"
+                 style="height: 110px; padding-top: 20px; padding-bottom: 20px; margin-bottom: -5px;"/>
+          </ion-item>
+        </ion-list>
+        <ion-list can-swipe="true" class="list-sub-menu">
+          <ion-item style="height: 56px;" ng-click="goTo('menu')">Início</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('ajuda')">Ajuda</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('avaliacao')">Avaliar</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('sobre')">Sobre</ion-item>
+        </ion-list>
+      </ion-drawer-vertical-content>
+      <ion-drawer-vertical-handle ng-click="toggleDrawer()">
+        <i class="icon ion-navicon icon-navi-menu"></i>
+      </ion-drawer-vertical-handle>
+    </ion-drawer-vertical-wrapper>
+    <ion-slides
+      disable-side-menu-drag=""
+      options="{'loop': false}"
+      slider="data.slider"
+      class="slider1"
+      delegate-handle="slider1"
+      id="slider1"
+      style="width: 100%; height: 100%;">
+      <!--
+      <ion-slide-page id="tutorial-slide24" style="background:url('../img/tutorial/img01.png') no-repeat center; background-size: 100% 100%;"></ion-slide-page>
+      <ion-slide-page id="tutorial-slide25" style="background:url('../img/tutorial/img02.png') no-repeat center; background-size: 100% 100%;"></ion-slide-page>
+      <ion-slide-page id="tutorial-slide26" style="background:url('../img/tutorial/img03.png') no-repeat center; background-size: 100% 100%;"></ion-slide-page>
+      <ion-slide-page id="tutorial-slide27" style="background:url('../img/tutorial/img04.png') no-repeat center; background-size: 100% 100%;"></ion-slide-page>
+      <ion-slide-page id="tutorial-slide28" style="background:url('../img/tutorial/img05.png') no-repeat center; background-size: 100% 100%;"></ion-slide-page>
+      -->
+      <ion-slide-page id="tutorial-slide24">
+        <div class="ajuda-text-box">
+          <div class="row">
+            <div class="col col-33" style="text-align: right;">
+            </div>
+            <div class="col col-33">
+              <button class="button button-block button-light btn-app-pmcb-ajuda" style="margin-top:0;" ng-click="sair()">
+                Pular
+              </button>
+            </div>
+            <div class="col col-33" style="text-align: left;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="next()">
+                <i class="icon ion-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <p class="ajuda-titulo-portrait">SEJA BEM VINDO</p>
+          <p class="ajuda-sub-titulo-portrait">ao app Conecta Campo Bom</p>
+          <p class="ajuda-texto">O aplicativo foi criado para facilitar o acesso</p>
+          <p class="ajuda-texto">da comunidade campo-bonense com a</p>
+          <p class="ajuda-texto">Prefeitura e Secretarias</p>
+        </div>
+        <img src="img/tutorial/img-002.png" style="width: 100%; margin-top: 65px;"/>
+      </ion-slide-page>
+
+      <ion-slide-page id="tutorial-slide25">
+        <div class="ajuda-text-box">
+          <div class="row">
+            <div class="col col-33" style="text-align: right;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="prev()">
+                <i class="icon ion-chevron-left"></i>
+              </button>
+            </div>
+            <div class="col col-33">
+              <button class="button button-block button-light btn-app-pmcb-ajuda" style="margin-top:0;" ng-click="sair()">
+                Pular
+              </button>
+            </div>
+            <div class="col col-33" style="text-align: left;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="next()">
+                <i class="icon ion-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <p class="ajuda-titulo-portrait">MENU SUPERIOR</p>
+          <p class="ajuda-texto">Acesse o menu superior acionando o botão</p>
+          <p class="ajuda-texto">localizado no topo ou deslize o dedo sobre</p>
+          <p class="ajuda-texto">a tela de cima para baixo</p>
+        </div>
+        <img src="img/tutorial/img-003.png" style="width: 80%; margin-left: 10%; margin-top: 40px;" />
+      </ion-slide-page>
+      <ion-slide-page id="tutorial-slide26">
+        <div class="ajuda-text-box">
+          <div class="row">
+            <div class="col col-33" style="text-align: right;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="prev()">
+                <i class="icon ion-chevron-left"></i>
+              </button>
+            </div>
+            <div class="col col-33">
+              <button class="button button-block button-light btn-app-pmcb-ajuda" style="margin-top:0;" ng-click="sair()">
+                Pular
+              </button>
+            </div>
+            <div class="col col-33" style="text-align: left;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="next()">
+                <i class="icon ion-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <p class="ajuda-titulo-portrait">CAMPO BOM PRA TI</p>
+          <p class="ajuda-texto">Fique por dentro de tudo que acontece</p>
+          <p class="ajuda-texto">na cidade: notícias, eventos, demandas</p>
+          <p class="ajuda-texto">atendidas, prefeitura e muito mais</p>
+        </div>
+        <img src="img/tutorial/img-004.png" style="width: 80%; margin-left: 10%; margin-top: 40px;"/>
+      </ion-slide-page>
+      <ion-slide-page id="tutorial-slide27">
+        <div class="ajuda-text-box">
+          <div class="row">
+            <div class="col col-33" style="text-align: right;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="prev()">
+                <i class="icon ion-chevron-left"></i>
+              </button>
+            </div>
+            <div class="col col-33">
+              <button class="button button-block button-light btn-app-pmcb-ajuda" style="margin-top:0;" ng-click="sair()">
+                Pular
+              </button>
+            </div>
+            <div class="col col-33" style="text-align: left;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="next()">
+                <i class="icon ion-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <p class="ajuda-titulo-portrait">SUA VOZ</p>
+          <p class="ajuda-texto">Canal de comunicação entre você e a</p>
+          <p class="ajuda-texto">Prefeitura de Campo Bom para dar</p>
+          <p class="ajuda-texto">sugestões, solicitar serviços e demandas</p>
+        </div>
+        <img src="img/tutorial/img-005.png" style="width: 80%; margin-left: 10%; margin-top: 40px;"/>
+      </ion-slide-page>
+      <ion-slide-page id="tutorial-slide28">
+        <div class="ajuda-text-box">
+          <div class="row">
+            <div class="col col-33" style="text-align: right;">
+              <button class="button button-light btn-app-pmcb-ajuda" ng-click="prev()">
+                <i class="icon ion-chevron-left"></i>
+              </button>
+            </div>
+            <div class="col col-33">
+              <button class="button button-block button-light btn-app-pmcb-ajuda" style="margin-top:0;" ng-click="sair()">
+                Fechar
+              </button>
+            </div>
+            <div class="col col-33" style="text-align: left;">
+            </div>
+          </div>
+
+          <p class="ajuda-titulo-portrait">EMPREGOS</p>
+          <p class="ajuda-texto">Vagas em destaque. Tenha acesso</p>
+          <p class="ajuda-texto">a informações de ofertas de trabalho</p>
+          <p class="ajuda-texto">na cidade de Campo Bom</p>
+        </div>
+        <img src="img/tutorial/img-006.png" style="width: 80%; margin-left: 10%; margin-top: 40px;"/>
+      </ion-slide-page>
+    </ion-slides>
+  </ion-content>
+</ion-view>

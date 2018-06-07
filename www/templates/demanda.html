@@ -1,0 +1,132 @@
+<ion-view id="page-demanda">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('suaVoz')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">NOVA DEMANDA</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('suaVoz')">
+        <i class="icon ion-close"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="true">
+
+    <div class="div-get-localização">
+      <p>
+        <span ng-click="getGeo()">
+          <i class="icon ion-location"></i>
+          Usar Minha Localização
+          <div id="map" style="display: none;"></div>
+        </span>
+      </p>
+    </div>
+
+    <div class="list list-form-app">
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Endereço:</span>
+        <input type="text" ng-model="data.endereco">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Número:</span>
+        <input type="text" ng-model="data.numero">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Complemento</span>
+        <input type="text" ng-model="data.complemento">
+      </label>
+      <label class="item item-input item-icon-right item-input-app-pmcb" modal-select ng-model="data.bairro" options="selectables" modal-title="Selecione um bairro" cancel-button="Cancelar" reset-button="Cancelar">
+        <span class="input-label">Bairro</span>
+        <span class="input-label" style="color: rgba(0, 0, 139, 1);">{{data.bairro}}</span>
+        <i class="icon ion-chevron-down" style="color: rgba(36, 129, 187, 1)"></i>
+        <div class="option">
+            {{option}}
+        </div>
+      </label>
+
+      <div class="div-app-pmcb-space"></div>
+
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Título</span>
+        <input type="text" ng-model="data.titulo">
+      </label>
+
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label" style="margin-top: -80px;">Descrição</span>
+        <textarea style="height: 100px; width: 200px;" ng-model="data.descricao"></textarea>
+      </label>
+
+      <div class="div-app-pmcb-space"></div>
+
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Nome</span>
+        <input type="text" ng-model="data.nome">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Email</span>
+        <input type="email" ng-model="data.email">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Celular</span>
+        <input type="tel" onblur="this.type='text';" onfocus="this.type='tel';" placeholder="(99)?9999-9999" ng-model="data.celular" phone-dir>
+      </label>
+      <label class="item item-input item-icon-right item-input-app-pmcb">
+        <span class="input-label">Whatsapp</span>
+        <input type="tel" onblur="this.type='text';" onfocus="this.type='tel'; this.value = '';" placeholder="(99)?9999-9999" ng-model="data.whatsapp" phone-dir>
+      </label>
+
+      <div class="div-app-pmcb-space"></div>
+
+      <img ng-show="image !== null"
+           ng-src="{{pathForImage(image)}}"
+           style="width: 100%;
+                  height: 100%;
+                  border: 2px solid rgba(255,255,255,1);
+                  border-radius: 6px;">
+
+      <p ng-show="image === null" style="background-color: rgba(255,255,255,1); color: rgba(36, 129, 187, 1); text-align: center; padding: 20px;">Visualização da Imagem</p>
+
+      <div class="div-app-pmcb-space"></div>
+
+      <div class = "row" style="width: 80%; margin-left: 10%;">
+        <div class = "col">
+          <button class="button button-block button-default button-formulario" ng-click="loadImage()">
+            <i class="icon ion-camera"></i>
+          </button>
+        </div>
+        <div class = "col">
+          <button class="button button-block button-default button-formulario" ng-click="uploadImage()">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <button class="button button-positive" >
+        Select it
+        <div class="option">
+            {{option}}
+        </div>
+    </button>
+    -->
+    <!--
+    <ion-pane>
+      <ion-header-bar class="bar-positive">
+        <h1 class="title">Devdactic Image Upload</h1>
+      </ion-header-bar>
+      <ion-content>
+        <img ng-src="{{pathForImage(image)}}" style="width: 100%; height: 100%;">
+      </ion-content>
+      <ion-footer-bar class="bar bar-positive">
+        <div class="button-bar">
+          <button class="button icon-left ion-camera" ng-click="loadImage()">Take Photo</button>
+          <button class="button icon-left ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Upload</button>
+        </div>
+      </ion-footer-bar>
+    </ion-pane>
+    <button class="button" ng-click="getGeo()">Geo</button>
+    <div id="map" data-tap-disabled="true"></div>
+    -->
+  </ion-content>
+</ion-view>

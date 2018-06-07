@@ -1,0 +1,52 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('empregos')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">EMPREGOS</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb-hidden" disabled>
+        <i class="icon ion-plus" style="color: transparent;"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="true">
+    <div class="list list-form-app">
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Nome da empresa:</span>
+        <input type="text" ng-model="data.nome_empresa">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Cargo oferecido:</span>
+        <input type="text" ng-model="data.cargo_oferecido">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label" style="margin-top: -80px;">Descrição do cargo</span>
+        <textarea style="height: 100px; width: 180px;" ng-model="data.descricao_cargo"></textarea>
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Telefone</span>
+        <!-- <input type="text" ng-model="data.telefone"> -->
+        <input type="tel" onblur="this.type='text';" onfocus="this.type='tel';" placeholder="(99)?9999-9999" ng-model="data.telefone" phone-dir>
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Email:</span>
+        <input type="text" ng-model="data.email">
+      </label>
+      <label class="item item-input item-input-app-pmcb">
+        <span class="input-label">Site:</span>
+        <input type="text" ng-model="data.site">
+      </label>
+    </div>
+
+    <div class = "row" style="width: 80%; margin-left: 10%;">
+      <div class = "col col-33"></div>
+      <div class = "col col-33">
+        <button class="button button-block button-default button-formulario" ng-click="enviar()">Enviar</button>
+      </div>
+      <div class = "col col-33"></div>
+    </div>
+  </ion-content>
+</ion-view>

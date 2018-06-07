@@ -1,0 +1,56 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('menu')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">DEU CERTO</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb-hidden" disabled>
+        <i class="icon ion-plus" style="color: transparent;"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="true">
+    <div ng-repeat="(index, item) in deuCerto">
+
+      <div style="background: rgba(255,255,255,1);
+                  padding: 4px;
+                  border-radius: 6px;
+                  margin-top: {{(index==0)? 0 : 10;}}px;
+                  margin-bottom: {{(index+1==deuCerto.length) ? 10 : 0;}}px">
+
+        <p class="p-deu-certo" style="font-size: 15px; font-weight: 700; margin-top: 5px; text-align:center;">
+          <span ng-bind="item.endereco"></span>
+          <span>,</span>
+          <span ng-bind="item.numero"></span>
+          <span>-</span>
+          <span ng-bind="item.bairro"></span>
+        </p>
+
+        <hr />
+
+        <p class="p-deu-certo"
+           style="font-size: 15px;
+                  font-weight: 700;
+                  text-align: center;
+                  margin-bottom: 10px;
+                  margin-top: 10px;">Antes</p>
+        <img class="img-deu-certo" src="{{item.imagem}}" />
+        <p class="p-deu-certo"
+           style="font-size: 15px;
+                  font-weight: 700;
+                  text-align: center;
+                  margin-bottom: 10px;
+                  margin-top: 10px;">Depois</p>
+        <img class="img-deu-certo" src="{{item.imagem_deu_certo}}" />
+        <p class="p-deu-certo" style="margin-top: 15px; margin-bottom: 15px; font-size: 15px; font-weight: bold; text-align: center;">
+          {{item.descricao_deu_certo}}
+        </p>
+
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,152 @@
+<ion-view id="page-sobre">
+  <ion-content padding="true" ng-click="goTo('menu')" >
+    <!--
+    <ion-drawer-vertical-wrapper direction="down" state="closed">
+      <ion-drawer-vertical-content>
+        <ion-list can-swipe="true">
+          <ion-item class="item-titulo-menu"
+                    style="text-align: center; padding: 0px;">
+            <img src="img/icones-menu/titulo-menu-new.png"
+                 style="height: 110px;
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        margin-bottom: -5px;"/>
+          </ion-item>
+        </ion-list>
+
+        <ion-list can-swipe="true" class="list-sub-menu">
+          <ion-item style="height: 56px;" ng-click="goTo('menu')">Início</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('ajuda')">Ajuda</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('avaliacao')">Avaliar</ion-item>
+          <ion-item style="height: 56px;" ng-click="goTo('sobre')">Sobre</ion-item>
+        </ion-list>
+      </ion-drawer-vertical-content>
+      <ion-drawer-vertical-handle ng-click="toggleDrawer()">
+        <i class="icon ion-navicon icon-navi-menu"></i>
+      </ion-drawer-vertical-handle>
+    </ion-drawer-vertical-wrapper>
+    -->
+
+    <!--
+    <div>
+      <table style="width: 96%; margin-left: 2%; margin-top: 28px;">
+        <tr>
+          <td colspan="3" style="height: 30px; vertical-align: middle;">
+            <hr style="width: 80%" />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="height: 36px; vertical-align: middle; font-size: 17px; font-weight: bold; text-align: center;">
+            <a style="color: black;" href="tel:+555133997351">+55 51 3399 7351</a>
+            <span style="margin-left: 5px; margin-right: 5px;">|</span>
+            <a style="color: black;" href="tel:+5551997195960">+55 51 99719 5960</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" style="height: 36px; vertical-align: middle; font-size: 17px; font-weight: bold; text-align: center;">
+            <a style="color: black;" ng-click="copy('contato@uptecbr.com');">contato@uptecbr.com</a>
+            <span style="margin-left: 6px; margin-right: 6px;">|</span>
+            <a style="color: black;" ng-click="goTo('site');">uptecbr.com</a>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    -->
+
+    <!--
+    <div class="geral">
+      <div class="header">
+      </div>
+      <div class="aside fleft">
+      </div>
+      <div class="aside fright">
+      </div>
+      <div class="content">
+      </div>
+      <div class="footer" style="bottom: 110px; font-size: 15px;">
+        <a style="color: black;" href="tel:+555133997351">(51) 3399 7351</a>
+        <span style="color: black; margin-left: 6px; margin-right: 6px;">|</span>
+        <a style="color: black;" ng-click="copy('contato@uptecbr.com');">contato@uptecbr.com</a>
+      </div>
+      <div class="footer">
+          <a style="color: white;" ng-click="goTo('site');">uptecbr.com</a>
+          <span style="margin-left: 6px; margin-right: 6px;"></span>
+          <a style="color: white;" ng-click="goTo('face');">
+            <i class="ion-social-facebook"
+            style="background: white; padding: 1px 10px; border-radius: 4px;color: darkblue;"></i> / uptecnologiabr
+          </a>
+      </div>
+    </div>
+    -->
+
+    <!--
+    <section style="top: 0; left: 0; position: absolute; width: 100%;">
+      <img src="img/fundo_sobre_uptec.jpg" style="width: 100%; height: {{imagem.height}}px;"/>
+      <div style="position: absolute; left: 10px; top: 10px; width: 100px; height:10px; background:red;"></div>
+    </section>
+    -->
+
+    <table style="background:transparent; width: 100%; position: absolute; left: 0px; top: 0px; border: 1px solid black; height: {{imagem.height}}px;">
+
+      <tr style="background:transparent; height: {{imagem.metade}}px;">
+        <td></td>
+      </tr>
+
+      <tr style="background:transparent; height: {{imagem.metade}}px;">
+        <td>
+          <table style="width: 100%;">
+            <tr style="background:transparent; height: {{imagem.info}}px;">
+              <td style="vertical-align: middle;">
+                <table style="width: 80%; margin-left: 10%;">
+                  <tr>
+                    <td>
+                      <img src="img/logo_uptec_sobre.png" style="width: 100%;"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <hr style="height: 1px;"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="font-size: 12px; text-align: center;">
+                        <a style="color: black;" href="tel:+555133997351">(51) 3399 7351</a>
+                        <span style="color: black; margin-left: 6px; margin-right: 6px;">|</span>
+                        <a style="color: black;" ng-click="copy('contato@uptecbr.com');">contato@uptecbr.com</a>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr style="background:transparent; height: {{imagem.separador}}px;">
+              <td>
+                <hr style="height: 3px; border: 3px solid rgba(56,56,56,1); padding: 0px; margin: 0; background: rgba(56,56,56,1);"/>
+              </td>
+            </tr>
+            <tr class="tr-rodape" style="height: {{imagem.rodape}}px;">
+              <td style="text-align: center; vertical-align: middle;">
+                <div>
+                  <a style="color: white;" ng-click="goTo('site');">uptecbr.com</a>
+                  <span style="margin-left: 6px; margin-right: 6px;"></span>
+                  <a style="color: white;" ng-click="goTo('face');">
+                    <i class="ion-social-facebook"
+                    style="background: white; padding: 1px 10px; border-radius: 4px;color: darkblue;"></i> / uptecnologiabr
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+
+    <p id="p1" style="display:none;"></p>
+
+  </ion-content>
+</ion-view>

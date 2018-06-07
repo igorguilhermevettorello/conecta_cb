@@ -1,0 +1,198 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('cidade')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz">SÍMBOLOS</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb-hidden" disabled>
+        <i class="icon ion-plus" style="color: transparent;"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header" padding="false">
+
+    <img src="{{info.imagem}}" style="width: 100%; border-bottom: 1px solid white;"/>
+    <div class="div-app-pmcb-historia">
+      <p class="p-app-pmcb-historia-texto" ng-bind-html="info.descricao"></p>
+    <div>
+
+    <!--
+    <img src="img/simbolos.png" style="width: 100%; border-bottom: 1px solid white;"/>
+    <div class="div-app-pmcb-historia">
+      <p class="p-app-pmcb-historia-titulo">Brasão Municipal</p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Coroa Mural: símbolo universal dos Brasões de domínio que classifica a
+        cidade representada na Terceira Grandeza, ou seja, sede do Município,
+        (é de prata, composta por seis torres, das quais só aparecem quatro,
+        na perspectiva do desenho);
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        A Bordadura Azul: simboliza favor e proteção;
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Os Jarros Ouros: lembra a indústria oleira;
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        A Botina Vermelha e as Engrenagens Pretas: lembram uma das expressões econômicas
+        de destaque na vida municipal, que é a indústria do couro e do calçado;
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Galhos de Videiras: lembram que foi em Campo Bom onde se fez os primeiros ensaios
+        para instalação da indústria vinícola do RS (embora tal inciativa de imigrantes
+        italianos não tenha logrado êxito em função das condições climáticas, o que não
+        desmerece o pioneirismo de um empreendimento que viria a dar resultados em outras regiões do estado);
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Metal Prata: paz, amizade, trabalho, prosperidade, pureza, racionalidade;
+        Listel Vermelho: em letras argentinas, prateadas o topônimo “CAMPO BOM”, ladeado pelos
+        milésimos “1926” (aos nove dias de agosto de Campo Bom é elevado à categoria de 10° Distrito
+        de São Leopoldo) e “1959” ( aos trinta e um dias de janeiro, a emancipação político de Campo Bom);
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Cor vermelha: simboliza a dedicação, amor-pátrio, audácia, coragem e a valentia;
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Cor Preta: significa prudência, sabedoria, moderação, ciência;
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Cor Azul: significa justiça, nobreza, perseverança, zelo e lealdade:
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Metal Ouro: simboliza a glória, esplendor, riqueza, grandeza e mando.
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Autoria: Heraldista Arcioné Antôno Peixoto de Faria
+      </p>
+
+      <p style="height: 10px;"></p>
+      <hr />
+      <p style="height: 10px;"></p>
+
+      <p class="p-app-pmcb-historia-titulo">Bandeira Municipal</p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        O estilo da Bandeira Municipal obedece a tradição portuguesa, da qual herdamos os cânones e
+        regras, ostentando uma figura geométrica onde o Brasão é aplicado, tendo por cores as mesmas
+        constantes do campo do escudo.
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        O Brasão simboliza o Governo Municipal e o triângulo branco, onde o Brasão é aplicado, representa
+        a própria cidade-sede do Município. As faixas que partem desse triângulo simbolizam a irradiação
+        do Poder Municipal a todos os quadrantes de seu território e os quartéis assim constituídos
+        representam as propriedades rurais existentes no mesmo.
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Autoria: Heraldista Arcioné Antôno Peixoto de Faria
+      </p>
+
+      <p style="height: 10px;"></p>
+      <hr />
+      <p style="height: 10px;"></p>
+
+      <p class="p-app-pmcb-historia-titulo">Logo da Gestão</p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        No logotipo da Administração Municipal de Campo Bom Gestão 2017-2020,
+        cinco figuras geométricas de diversos tamanhos, tendo como base as cores do
+        brasão do município (azul, amarelo e vermelho), representam o povo campo-bonense
+        e a sua união, com o slogan “Campo Bom: Juntos por um novo Caminho”.
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Criação: Edson Cruz Júnior
+      </p>
+
+      <p style="height: 10px;"></p>
+      <hr />
+      <p style="height: 10px;"></p>
+
+      <p class="p-app-pmcb-historia-titulo">Hino do Município</p>
+      <p class="p-app-pmcb-historia-texto-nj hino-campo-bom">
+        <span>Entre matas e palmeiras</span>
+        <span>E as pastagens verdejantes</span>
+        <span>Lá brotaram as sementes</span>
+        <span>Dos primeiros imigrantes</span>
+        <span>Entre a serra e o Rio dos Sinos</span>
+        <span>Foi que nasceu a grande estrada</span>
+        <span>Por onde vinhas os tropeiros</span>
+        <span>Tangendo sempre a boiada.</span>
+        <span style="height: 10px;"></span>
+        <span>Refrão</span>
+        <span style="height: 10px;"></span>
+        <span>Campo Bom, terra vida alegria</span>
+        <span>De um povo contente</span>
+        <span>Renovas toda hora todo dia</span>
+        <span>O orgulho dessa tua gente!</span>
+        <span style="height: 10px;"></span>
+        <span>Veio a Maria Fumaça</span>
+        <span>E já foi tudo melhorando</span>
+        <span>O comércio e a indústria</span>
+        <span>E o progresso foi chegando</span>
+        <span>Exportando teus calçados</span>
+        <span>Tu no Brasil foste o primeiro</span>
+        <span>Com tuas lindas ciclovias</span>
+        <span>Na América és o pioneiro.</span>
+        <span style="height: 10px;"></span>
+        <span>Refrão</span>
+        <span style="height: 10px;"></span>
+        <span>Campo Bom eternamente</span>
+        <span>Estarás no meu coração</span>
+        <span>Praças, parques de lazer</span>
+        <span>Tua cultura e educação</span>
+        <span>Teus filhos que aqui nasceram</span>
+        <span>E também os de adoção</span>
+        <span>É com orgulho verdadeiro</span>
+        <span>Que cantam juntos o refrão.</span>
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Letra e Música: Agostinho Schnor, Lori Forell, Ria Blos, Marisa Elisabeth Haupt Schnor,
+        Julita Ethel Von Scharten Pereira e Paulo Pereira.
+      </p>
+
+      <p style="height: 10px;"></p>
+      <hr />
+      <p style="height: 10px;"></p>
+
+      <p class="p-app-pmcb-historia-titulo">Jingle Campo Bom 2017- 2020</p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        A ideia do jingle de Campo Bom "Juntos por um novo Caminho", de autoria de Tiago de Vargas,
+        é de destacar os aspectos de união e de proximidade da comunidade, do desejo de mudança,
+        da esperança de achar em conjunto novas alternativas para que o município prossiga crescendo
+        e se desenvolvendo. Também realça a paixão que o campo-bonense nutre por sua terra, o seu lar,
+        através do refrão "Campo Bom, bom pra mim, bom pra ti".
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj hino-campo-bom">
+        <span style="height: 10px;"></span>
+        <span>“CAMPO BOM, BOM PRA MIM, BOM PRA TI”</span>
+        <span style="height: 10px;"></span>
+        <span>Uma cidade unida cresce muito mais</span>
+        <span>Um povo que acredita, e sabe que é capaz</span>
+        <span>De trilhar o seu caminho com esperança e coração</span>
+        <span>Trabalhando, conquistando e fazendo com paixão</span>
+        <span style="height: 10px;"></span>
+        <span>Campo Bom, minha cidade o meu lar</span>
+        <span>Nova história um novo tempo</span>
+        <span>Pra crescer realizar</span>
+        <span style="height: 10px;"></span>
+        <span>Campo Bom, bom pra mim e bom pra ti</span>
+        <span>Minha terra o meu chão, um bom motivo pra sorrir</span>
+        <span>Campo Bom, um bom caminho pra vencer</span>
+        <span>A esperança e a força, todos juntos, pra fazer acontecer</span>
+        <span style="height: 10px;"></span>
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj" style="margin-top: 15px; margin-bottom: 0px;">
+        Letra e Música: Tiago de Vargas
+      </p>
+      <p class="p-app-pmcb-historia-texto-nj">
+        Arranjos: Gabriel Santos
+      </p>
+    <div>
+    -->
+    <!--
+    <p>Brasão da Cidade de Campo Bom em PDF</p>
+    <p>Bandeira da Cidade de Campo Bom em PDF</p>
+    <p>Logo Prefeitura de Campo Bom em PDF</p>
+    <p>Manual de Identidade Visual de Campo Bom em PDF</p>
+      -->
+  </ion-content>
+</ion-view>

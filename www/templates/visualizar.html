@@ -1,0 +1,62 @@
+<ion-view id="page-sua-voz">
+  <ion-header-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb" ng-click="goTo('noticias')">
+        <i class="icon ion-chevron-left"></i>
+      </button>
+    </div>
+    <h1 class="title title-center title-sua-voz" style=" top: 2px !important;">NOTÍCIAS</h1>
+    <div class="buttons">
+      <button class="button button-light btn-app-pmcb-hidden" disabled>
+        <i class="icon ion-plus" style="color: transparent;"></i>
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="has-header visualizar" 
+               padding="true" 
+               on-touch="onTouch($event)"
+               on-drag-up="onDragUp($event)"
+               on-drag-left="onDragLeft($event)"
+               on-drag-right="onDragRight($event)"
+               on-release="onRelease($event)">
+
+    <ion-scroll 
+      direction="y" 
+      style="position: absolute;
+             padding: 10px;
+             top: 0px;
+             left: {{info.page.left.left}}px;
+             width:{{info.page.left.width}}px ">
+      <p class="p-noticia-data-hora" ng-bind="noticia.left.data_hora"></p>
+      <p class="p-noticia-titulo" ng-bind="noticia.left.titulo"></p>
+      <div class="div-noticia">
+        <img class="img-noticia" src="{{noticia.left.imagem}}" />
+      </div>
+      <p class="p-reportagem" ng-bind-html="noticia.left.reportagem"></p>
+    </ion-scroll>
+    
+    <ion-scroll id="scroll-center" direction="y" style="left: {{info.left}}px">
+      <p class="p-noticia-data-hora" ng-bind="noticia.center.data_hora"></p>
+      <p class="p-noticia-titulo" ng-bind="noticia.center.titulo"></p>
+      <div class="div-noticia">
+        <img class="img-noticia" src="{{noticia.center.imagem}}" />
+      </div>
+      <p class="p-reportagem" ng-bind-html="noticia.center.reportagem"></p>
+    </ion-scroll>
+
+    <ion-scroll 
+      direction="y" 
+      style="position: absolute;
+             padding: 10px;
+             top: 0px;
+             left: {{info.page.right.left}}px;
+             width:{{info.page.right.width}}px ">
+      <p class="p-noticia-data-hora" ng-bind="noticia.right.data_hora"></p>
+      <p class="p-noticia-titulo" ng-bind="noticia.right.titulo"></p>
+      <div class="div-noticia">
+        <img class="img-noticia" src="{{noticia.right.imagem}}" />
+      </div>
+      <p class="p-reportagem" ng-bind-html="noticia.right.reportagem"></p>
+    </ion-scroll>
+  </ion-content>
+</ion-view>
